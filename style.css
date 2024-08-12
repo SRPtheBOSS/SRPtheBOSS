@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #000, rgb(40, 40, 40));
+}
+.boxgrid, .board, .result{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.boxgrid{
+  background: #ffffff;
+  padding: 20px 25px 25px;
+  border-radius: 9%;
+  max-width: 450px;
+  width: 100%;
+}
+.boxgrid.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+.boxgrid h1{
+  font-size: 30px;
+  font-weight: 900;
+  padding-bottom: 10px;
+  margin-left: 85px;
+}
+.boxgrid .title{
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 82px;
+  padding-bottom: 40px;
+  color: rgb(82, 82, 82);
+}
+.boxgrid .opt{
+  display: flex;
+  width: 100%;
+}
+.opt button{
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  background: #000;
+  border-radius: 20%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.opt button:hover,.btn button:hover{
+  transform: scale(0.96);
+}
+.opt button.X{
+  margin-right: 40px;
+}
+.opt button.O{
+  margin-left: 40px;
+}
+.board{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.board.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.board .details{
+  padding: 7px;
+  border-radius: 10%;
+  background: #ffffff;
+}
+.board .players{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.players span{
+  position: relative;
+  z-index: 2;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  transition: all 0.3 ease;
+}
+.players.active span:first-child{
+  color: #fff;
+}
+.players.active span:last-child{
+  color: #000000;
+}
+.players span:first-child{
+  color: #fff;
+}
+.players .slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  border-radius: 20%;
+  transition: all 0.3s ease;
+}
+.players.active .slider{
+  left: 50%;
+}
+.players.active span:first-child{
+  color: #000000;
+}
+.players.active span:nth-child(2){
+  color: #fff;
+}
+.players.active .slider{
+  left: 50%;
+}
+.play-area{
+  margin-top: 20px;
+}
+.play-area section{
+  display: flex;
+  margin-bottom: 1px;
+}
+.play-area section span{
+  display: block;
+  height: 90px;
+  width: 90px;
+  margin: 3px;
+  color: #000000;
+  font-size: 40px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 20%;
+  background: #fff;
+}
+.result{
+  content: '&#xe042';
+  padding: 25px 20px;
+  border-radius: 10%;
+  max-width: 400px;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  background: #fff;
+}
+.result.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.result .won-text{
+  font-size: 23px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.result .won-text p{
+  font-weight: 900;
+  margin: 0 5px;
+}
+.result .btn{
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.btn button{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  background: #000000;
+  border-radius: 20%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
